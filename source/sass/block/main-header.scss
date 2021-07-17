@@ -1,0 +1,61 @@
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid $gray-light;
+  padding: 26px 30px 20px 30px;
+  height: auto;
+  position: relative;
+  
+  &__block {
+    margin-right: 54px;
+    
+    @media (min-width: 769px) {
+      margin-right: 0;
+    }
+  }
+}
+
+.main-header .navigation--opened {
+  min-height: 60px;
+  
+  @media (min-width: 769px) {
+    min-height: auto;
+  }  
+}
+
+.main-header__block {
+  display: flex;
+}
+
+.main-header__basket {
+  width: 38px;
+  height: 34px;
+  margin-left: 9px;
+  background-image: url(../img/icon-use/basket.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.main-header__basket-link {
+  position: relative;
+}
+
+.main-header__basket-quantity {
+  width: 11px;
+  height: 11px;
+  background: $blue;
+  border-radius: 50%;
+  position: absolute;
+  left: 24px;
+  top: 1px;
+  font-size: 10px;
+  line-height: 12px;
+  color: $white-basic;
+  text-align: center;
+  padding: 1px;
+}
+
+.main-header__logo-text {
+  font-size: 18px;
+  line-height: 21px;
+}
