@@ -1,0 +1,135 @@
+.catalog {
+  @media (min-width: $desktop-width) {
+    position: relative;
+    
+    &::after {
+      content: "";
+      position: absolute;
+      width: 2px;
+      height: 89%;
+      background-color: $black-background;
+      left: -56px;
+      top: 10px;
+    }
+  }
+}
+
+.catalog__collection {
+  margin-bottom: 80px;
+  
+  @media (min-width: $tablet-width) {
+    margin-left: 4px;
+  }
+  
+  @media (min-width: $desktop-width) {
+    margin-bottom: 40px;
+    margin-left: -6px;
+  }
+}
+
+.catalog__collection--last {
+  margin-bottom: 19px;
+  
+  @media (min-width: $tablet-width) {
+    margin-left: 0;
+  }
+@media (min-width: $desktop-width) {
+    margin-bottom: 9px;
+    margin-left: -6px;
+  }
+}
+
+.catalog__title {
+  line-height: 37.5px;
+  text-align: center;
+  margin-top: 28px;
+  margin-bottom: 31px;
+  
+  @media (min-width: $tablet-width) {
+    margin-top: 20px;
+    margin-bottom: 40px;
+  }
+  
+  @media (min-width: $desktop-width) {
+    text-align: left;
+    margin-bottom: 44px;
+    margin-top: 2px;
+    margin-left: -5px;
+  }
+}
+
+.catalog__button-block {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 30px 0 16px;
+  
+  @media (min-width: $tablet-width) {
+    margin: 0 147px 0 40px;
+  }
+  
+  
+  @media (min-width: $desktop-width) {
+    justify-content: center;
+    align-content: center;
+    margin: 0;
+  }
+}
+
+.catalog__button {
+  font-size: 14px;
+  line-height: 13.4px;
+  margin: 0;
+  
+  @media (min-width: $desktop-width) {
+    margin: 0 106px 0 19px;
+  }
+}
+
+.catalog__button--next {
+  display: none;
+  
+  @media (min-width: $tablet-width) {
+    display: inline;
+  }
+}
+
+.catalog__button--close {
+  opacity: 50%;
+}
+
+.catalog__button--all {
+  margin-top: -4px;
+}
+
+.catalog__button-img {
+  background: url(../img/icon-use/toggle_1.svg) no-repeat;
+  width: 13px;
+  height: 7px;
+  border: none;
+  background-size: contain;
+  margin-left: 20px;
+  padding: 0;
+  
+  @media (min-width: $tablet-width) {
+    margin-left: 19px;
+  }
+  
+  &--all {
+    background-repeat: repeat-y;
+    width: 11px;
+    height: 14px;
+    
+    @media (min-width: $tablet-width) {
+      margin-left: 22px;
+    }
+    
+    @media (min-width: $desktop-width) {
+      margin-left: 19px;
+    }
+  }
+  
+  &--close {
+    transform: rotate(180deg);
+    vertical-align: middle;
+  }
+}

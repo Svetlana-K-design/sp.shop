@@ -1,0 +1,168 @@
+.contacts {
+  font-size: 14px;
+  line-height: 13px;
+  
+  @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: repeat(6, auto);
+  }
+}
+
+.contacts__phone {
+  margin-bottom: 41px;
+  
+  @media (min-width: $desktop-width) {
+    margin-bottom: 3px;
+  }
+}
+
+.contacts__address {
+  margin-bottom: 41px;
+  
+  @media (min-width: $desktop-width) {
+    margin-bottom: 8px;
+  }
+}
+
+
+.contacts__title {
+  font-family: "PlayfairDisplay", serif;
+  font-size: 20px;
+  line-height: 26px;
+  font-weight: 400;
+  color: $color-title;
+  margin-bottom: 32px;
+  position: relative;
+  
+  &::before {
+    content: "";
+    position: absolute;
+    width: 26px;
+    height: 1px;
+    background-color: $color-basic;
+    top: 31px;
+    left: 46%;
+    
+    @media (min-width: $tablet-width) {
+      left: 48.4%;
+      top: 30px;
+    }
+    
+    @media (min-width: 1200px) {
+      display: none;
+    }
+    
+  }
+  
+  @media (min-width: 1200px) {
+    font-size: 32px;
+    line-height: 42px;
+    margin-top: 20px;
+    margin-bottom: 22px;
+  }
+}
+
+.contacts__title--social {
+  margin-top: 63px;
+  margin-bottom: 4px;
+  
+  @media (min-width: $tablet-width) {
+    margin-top: 60px;
+    margin-bottom: 3px;
+  }
+  
+  @media (min-width: $desktop-width) {
+    margin-top: 21px;
+  }
+  
+  &::before {
+    display: none;
+  }
+  
+  &::after {
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: url(../img/icon-use/instagram.svg) no-repeat;
+    margin-left: 10px;
+    
+    @media (min-width: $desktop-width) {
+      width: 30px;
+      height: 30px;
+      background-size: cover;
+      margin-left: 20px;
+    }
+  }
+}
+
+.contacts__link {
+  display: block;
+  margin-bottom: 20px;
+  
+  @media (min-width: $desktop-width) {
+    margin-bottom: 15px;
+    
+    &::before {
+      content: "";
+      width: 8px;
+      height: 8px;
+      background-color: $color-title;
+      display: inline-block;
+      border-radius: 50%;
+      margin-right: 7px;
+    }
+  }
+}
+
+.contacts__title--social {
+  font-size: 26px;
+  line-height: 34.66px;
+  
+  @media (min-width: $desktop-width) {
+    font-size: 32px;
+    line-height: 42px;
+    margin-bottom: 7px;
+  }
+}
+
+.contacts__time {
+  @media (min-width: $desktop-width) {
+    margin-bottom: 7px;
+  }
+}
+
+@media (min-width: $desktop-width)  {
+  .contacts__time p {
+    &::before {
+      content: "";
+      width: 8px;
+      height: 8px;
+      background-color: $color-title;
+      display: inline-block;
+      border-radius: 50%;
+      margin-right: 7px;
+    }
+  }
+}
+
+.contacts__conf {
+  font-size: 12px;
+  line-height: 18px;
+  
+  @media (min-width: $desktop-width) {
+    margin-bottom: -4px;
+  }
+}
+
+.contacts__author {
+  font-size: 14px;
+  line-height: 14px;
+}
+
+.contacts__social {
+  grid-column: 2;
+  grid-row: 1/6;
+  margin-left: auto;
+}

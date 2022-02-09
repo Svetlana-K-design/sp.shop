@@ -12,10 +12,6 @@
     border-left: 1px solid $gray-light;
     padding-left: 40px;
   }
-  
-  @media (min-width:$desktophd-width) {
-    height: 180%;
-  }
 }
 
 .basket__title {
@@ -60,10 +56,4 @@
 
 .basket__promo-form {
   padding-bottom: 40px;
-}
-
-.basket__promo-code {
-  @include input;
-  width: 225px;
-  margin-right: 7px;
 }

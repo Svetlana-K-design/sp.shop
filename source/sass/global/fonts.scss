@@ -1,20 +1,73 @@
-
 @font-face {
-  font-family: "Roboto";
+  font-family: "GothamPro";
   font-style: normal;
-  font-weight: 400;
+  font-weight: 300;
   font-display: swap;
-  src: local("Roboto-Regular"),
-       url("../fonts/Roboto-Regular.ttf") format("truetype");
+  src: local("GothamPro-Light"),
+       url("../fonts/GothamPro-Light.ttf") format("truetype");
 }
 
 @font-face {
-  font-family: "Roboto";
+  font-family: "GothamPro";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local("GothamPro"),
+       url("../fonts/GothamPro.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "GothamPro";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: local("GothamPro-Medium"),
+       url("../fonts/GothamPro-Medium.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "PlayfairDisplay";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local("PlayfairDisplay-Regular"),
+       url("../fonts/PlayfairDisplay-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "PlayfairDisplay";
   font-style: normal;
   font-weight: 700;
   font-display: swap;
-  src: local("Roboto-Bold"),
-       url("../fonts/Roboto-Bold.ttf") format("truetype");
+  src: local("PlayfairDisplay-Bold"),
+       url("../fonts/PlayfairDisplay-Bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "PlayfairDisplay";
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: local("PlayfairDisplay-Italic"),
+       url("../fonts/PlayfairDisplay-Italic.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "OpenSans";
+  font-style: italic;
+  font-weight: 700;
+  font-display: swap;
+  src: local("OpenSans-BoldItalic"),
+       url("../fonts/OpenSans-BoldItalic.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "OpenSans";
+  font-style: italic;
+  font-weight: 600;
+  font-display: swap;
+  src: local("OpenSans-SemiBoldItalic"),
+       url("../fonts/OpenSans-SemiBoldItalic.ttf") format("truetype");
 }
 
 @font-face {

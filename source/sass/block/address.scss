@@ -1,0 +1,29 @@
+.address__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.address__item {
+  margin-bottom: 14px;
+  
+  @media (min-width: $desktop-width) {
+    &::before {
+      content: "";
+      width: 8px;
+      height: 8px;
+      background-color: $color-title;
+      display: inline-block;
+      border-radius: 50%;
+      margin-right: 7px;
+    }
+  }
+}
+
+.address__item--desktop {
+  display: none;
+  
+  @media (min-width: $desktop-width) {
+    display: block;
+  }
+}

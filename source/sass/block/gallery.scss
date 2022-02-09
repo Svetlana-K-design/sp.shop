@@ -1,0 +1,262 @@
+@media (min-width:361px) {
+  .gallery {
+    display: flex;
+    justify-content: flex-end;
+    
+    &--right {
+      flex-direction: row-reverse;
+      justify-content: flex-start;
+    }
+  }
+  
+  .gallery__description {
+    margin-right: 40px;
+    
+    @media (min-width: 1920px) {
+      margin-right: 70px;
+    }
+    
+    &--left {
+      margin-right: 0;
+      margin-left: 40px;
+      
+      @media (min-width: 1920px) {
+        margin-left: 70px;
+      }
+    }
+  }
+}
+
+.gallery__title {
+  margin-top: 14px;
+  margin-bottom: 21px;
+  
+  @media (min-width: $tablet-width) {
+    margin-top: 0;
+    margin-bottom: 32px;
+  }
+  
+  @media (min-width: $desktop-width) {
+    margin-bottom: 42px;
+  }
+}
+
+.gallery__img  {
+  @media (min-width: $tablet-width) {
+    min-width: 370px;
+    height: auto;
+  }
+  
+  @media (min-width: $desktop-width) {
+    min-width: 50%;
+  }
+  
+  @media (min-width: 1920px) {
+    min-width: 690px;
+    
+    &--right {
+      min-width: 665px;
+    }
+  }
+}
+
+.gallery__text--room {
+  text-align: right;
+}
+
+.gallery__text p {
+  margin-bottom: 20px;
+  
+  @media (min-width: $tablet-width) {
+    margin-bottom: 36px;
+  }
+  
+  @media (min-width: $desktop-width) {
+    margin-bottom: 40px;
+  }
+  
+  @media (min-width: 1920px) {
+    margin-bottom: 89px;
+  }
+}
+
+.gallery__show-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 114px;
+  font-family: "PlayfairDisplay", serif;
+  font-size: 22px;
+  line-height: 29px;
+  font-weight: 400;
+  
+  @media (min-width: $tablet-width) {
+    justify-content: flex-start;
+    margin-bottom: 79px;
+  }
+  
+  @media (min-width: 1920px) {
+    font-size: 32px;
+    line-height: 42px;
+    margin-bottom: 0;
+  }
+  
+  &--right {
+    margin-bottom: 52px;
+    
+    @media (min-width: $tablet-width) {
+      flex-direction: row-reverse;
+      margin-bottom: 77px;
+    }
+    
+    @media (min-width: $desktop-width) {
+      margin-bottom: 0;
+    }
+  }
+}
+
+
+
+.gallery--left .gallery__show-button {
+  @media (min-width: $desktop-width) {
+    justify-content: flex-start;
+  }
+}
+
+.gallery__link { 
+  font-family: "PlayfairDisplay", serif;
+  font-size: 22px;
+  line-height: 29px;
+  font-weight: 400;
+  
+  &--button {
+    margin-right: 30px;
+    
+    @media (min-width: $tablet-width) {
+      margin-right: 20px;
+    }
+  }
+  
+@media (min-width: $tablet-width) {
+    font-size: 18px;
+    line-height: 24px;
+  }
+  
+  @media (min-width: 1920px) {
+      font-size: 32px;
+      line-height: 43px;
+    }
+}
+
+.gallery__link img {
+  @media (min-width: $tablet-width) {
+    width: 60px;
+    height: 60px;
+  }
+  
+  @media( min-width: $desktop-width) {
+    width: 80px;
+    height: 80px;
+  }
+  
+  @media( min-width: 1920px) {
+    width: 120px;
+    height: 120px;
+  }
+}
+
+.gallery__show-button--right .gallery__link--button {
+  
+  @media (min-width: $tablet-width) {
+  margin-right: 0;
+  margin-left: 20px;
+}
+}
+
+
+.gallery--left {
+  position: relative;
+  
+  &::before {
+    content: "";
+    position: absolute;
+    left: -20px;
+    top: -100px;
+    width: 150px;
+    height: 150px;
+    background: url(../img/icon-use/back_4.svg) no-repeat;
+    
+    @media (min-width: $tablet-width) {
+      display: none;
+    }
+  }
+}
+
+.gallery__button-opened {
+  border: none;
+  background-color: inherit;
+  cursor: pointer;
+  padding: 0;
+  
+  
+  img {
+    
+    @media( min-width: $tablet-width) {
+      width: 60px;
+      height: 60px;
+    }
+    
+    @media( min-width: $desktop-width) {
+      width: 80px;
+      height: 80px;
+    }
+    
+    @media( min-width: 1920px) {
+      width: 120px;
+      height: 120px;
+    }
+  }
+}
+
+.gallery__button-closed {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @media (min-width: $tablet-width) {
+    justify-content: flex-start;
+    margin-bottom: 79px;
+  }
+
+  @media (min-width: 1920px) {
+    margin-bottom: 0;
+  }
+
+  &--right {
+    margin: 0;
+    
+    @media (min-width: $tablet-width) {
+      flex-direction: row-reverse;
+      margin-bottom: 77px;
+    }
+    
+    @media (min-width: $desktop-width) {
+      margin-bottom: 0;
+    }
+  } 
+}
+
+.gallery__button-closed {
+  display: none;
+}
+
+.gallery__button-opened:hover + .gallery__button-closed,
+.gallery__button-opened:active + .gallery__button-closed {
+  display: flex;
+  padding: 0;
+  margin: 0;
+}
+
+.gallery__button-opened:hover {
+  display: none;
+}

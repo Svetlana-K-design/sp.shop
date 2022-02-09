@@ -1,0 +1,162 @@
+.carousel__img {
+  @media (min-width:$tablet-width) {
+    min-width: 370px;
+    height: auto;
+  }
+}
+
+.carousel__controls {
+  display: flex;
+  width: 140px;
+  justify-content: space-between;
+  margin: 0 auto;
+  padding-top: 13px;
+  
+  
+  .carousel__control {
+    padding: 0;
+    width: 10px;
+    height: 10px;
+    background-color: $color-title;
+    opacity: 25%;
+    border-radius: 50%;
+    cursor: pointer;
+    
+    &--current {
+      opacity: 100%;
+    }
+  }
+  
+  @media (min-width: 1920px) {
+    display: none;
+  }
+}
+
+.carousel__pagination {
+    line-height: 50px;
+    color: $white-basic;
+    font-style: italic;
+    font-family: "OpenSans", sans-serif;
+}
+
+.carousel__pagination--total {
+  display: none;
+  
+  @media (min-width: 1920px) {
+  display: block;
+  position: absolute;
+  font-size: 42px;
+  font-weight: 700;
+  left: 40px;
+  top: -9px;
+}
+}
+
+.carousel__pagination--box {
+  display: none;
+  
+  @media (min-width: 1920px) {
+    position: absolute;
+    display: inline-block;
+    font-size: 38px;
+    font-weight: 600;
+    bottom: 50px;
+    left: 302px;
+    padding: 0;
+    margin: 0;
+  }
+}
+
+.carousel__total-pages,
+.carousel__slash {
+  opacity: 25%;
+}
+
+.carousel__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.carousel__item {
+  margin: 0;
+  padding: 0;
+}
+
+.carousel__description {
+  display: none;
+  
+  @media (min-width: 1920px) {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 320px;
+    height: 222px;
+    padding: 30px;
+    background-color: $white-background;
+    border-top-right-radius: 10%;
+  }
+  
+  h3 {
+    font-size: 40px;
+    line-height: 50px;
+    font-weight: 600;
+    color: $white-basic;
+    font-style: italic;
+    font-family: "OpenSans", sans-serif;
+    text-transform: uppercase;
+    margin-top: 0;
+    margin-bottom: 27px;
+  }
+  
+  p {
+    font-size: 13px;
+    line-height: 19.5px;
+    color: $white-basic;
+  }
+}
+
+.carousel__trail {
+  display: none;
+  
+  @media (min-width: 1920px) {
+    display: block;  
+    position: absolute;
+    bottom: 62px;
+    left: 30px;
+    
+  }
+}
+
+.carousel__box {
+  display: inline-block;
+  width: 40px;
+  height: 3.2px;
+  background-color: $white-background;
+  padding: 0;
+  margin: 0;
+}
+
+.carousel__box--active {
+  background-color: $white-basic;
+}
+
+.carousel__button {
+  display: none;
+  
+  @media (min-width: 1920px) {
+    position: absolute;
+    display: inline-block;
+    bottom: 112px;
+    left: 355px;
+    padding: 0;
+    margin: 0;
+    border: none;
+    background-color: inherit;
+  }
+}
+
+.carousel__button:hover {
+  opacity: 25%;
+}

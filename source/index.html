@@ -3,178 +3,268 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Billing-form for SP.shop</title>
+  <title>Burbon.ru</title>
   <link href="css/style.min.css" rel="stylesheet">
-  <link rel="preload" href="fonts/Roboto-Regular.ttf" as="font" crossorigin>
+  <link rel="preload" href="fonts/PlayfairDisplay-Regular.ttf" as="font" crossorigin>
 </head>
 <body class="page-body">
-  <header class="page-body__main-header main-header">
-    <div class="main-header__logo">
-      <img class="main-header__logo-img" src="img/icon-use/SP.svg" width="44" height="28" alt="SP.shop company logo"><span class="main-header__logo-text">.shop</span>
-    </div>
-    <nav class="main-header__navigation navigation navigation--opened navigation--nojs">
-      <button class="navigation__toggle" type="button"><span class="visually-hidden">Open menu</span></button>
-      <ul class="navigation__list list">
-        <li class="navigation__item">
-          <a class="navigation__link" href="#">Women’s</a>
-        </li>
-        <li class="navigation__item">
-          <a class="navigation__link" href="#">Men’s</a>
-        </li>
-        <li class="navigation__item">
-          <a class="navigation__link" href="#">Home</a>
-        </li>
-        <li class="navigation__item">
-          <a class="navigation__link" href="#">Travel</a>
-        </li>
-        <li class="navigation__item">
-          <a class="navigation__link" href="#">Beauty</a>
-        </li>
-        <li class="navigation__item">
-          <a class="navigation__link" href="#">Sale</a>
-        </li>
-      </ul>   
-    </nav>
-    <div class="main-header__block">
+  <div class="page-body__wrapper">
+    <header class="page-body__main-header main-header">
+      <nav class="main-header__navigation navigation navigation--closed navigation--nojs">
+        <button class="navigation__toggle-opened" type="button"><span class="visually-hidden">Открыть меню</span></button>
+        <ul class="navigation__list">
+          <li class="navigation__item">
+            <a class="navigation__link" href="list.html">Каталог</a>
+          </li>
+          <li class="navigation__item">
+            <a class="navigation__link" href="#">Дизайн</a>
+          </li>
+          <li class="navigation__item">
+            <a class="navigation__link" href="#">О нас</a>
+          </li>
+          <li class="navigation__item">
+            <a class="navigation__link" href="#">Контакты</a>
+          </li>
+          <li class="navigation__item">
+            <a class="navigation__link" href="#">Доставка</a>
+          </li>
+          <li class="navigation__item">
+            <a class="navigation__link" href="#">Гарантии</a>
+          </li>
+        </ul>
+        <button class="navigation__toggle-closed" type="button"><span class="visually-hidden">Закрыть меню</span></button>  
+      </nav>
+      <div class="main-header__logo">
+        <img class="main-header__logo-img" src="img/icon-use/logo.svg" alt="Логотип МиоКерамика">
+      </div>
       <div class="main-header__search search">
         <form class="search__form" action="" method="get">
           <button class="search__toggle" type="submit">
-            <svg width="27" height="29" class="search__img">            
+            <svg width="22" height="22" class="search__img">            
               <use xlink:href="img/sprite.svg#search"></use>
+            </svg>
+            <svg width="22" height="22" class="search__img-gray">            
+              <use xlink:href="img/sprite.svg#search_gray"></use>
             </svg>
           </button>
           <input type="search" class="search__request">
         </form>
       </div>
-      <div class="main-header__basket basket__toggle">
-        <a class="main-header__basket-link" href="#">
-          <span class="main-header__basket-quantity">2</span>
-        </a>
-      </div>
-    </div>
-  </header>
-  <main class="page-body__index index">
-    <h1 class="visually-hidden">Page of payment</h1>
-    <ol class="index__breadcrumb breadcrumb">
-      <li class="breadcrumb__item">
-        <a class="breadcrumb__link" href="#">Account</a>
-      </li>
-      <li class="breadcrumb__item">
-        <a class="breadcrumb__link" href="#">Shipping</a>
-      </li>
-      <li class="breadcrumb__item breadcrumb__item--active">
-        <a class="breadcrumb__link" href="#">Billing</a>
-      </li>
-      <li class="breadcrumb__item breadcrumb__item--disabled">
-        <a class="breadcrumb__link" href="#">Review</a>
-      </li>
-    </ol>
-    <form class="index__billing-form billing-form" method="post" action="http://localhost:3000/form.html">
-      <h2 class="billing-form__title">Billing Information</h2>
-      <fieldset class="billing-form__block">
-        <input type="radio" class="billing-form__pay visually-hidden" id="pay-card" name="pay" checked><label class="billing-form__pay-label billing-form__pay-label--card" for="pay-card">Pay with Credit Card</label>
-        <input type="radio" class="billing-form__pay billing-form__pay--PayPal visually-hidden" name="pay" id="pay-paypal"><label class="billing-form__pay-label billing-form__pay-label--PayPal" for="pay-paypal">
-          <svg width="85" height="23" class="billing-form__pay-img">
-            <use xlink:href="img/sprite.svg#PayPal"></use>
-          </svg>
-        </label>
-      </fieldset>
-      <fieldset class="billing-form__card-block">
-        <div class="billing-form__card-first">
-          <label class="billing-form__card-label" for="name">Name on card</label>
-          <p class="billing-form__card-list"><input type="text" id="name" class="billing-form__item billing-form__item--name" placeholder="Placeholder Text" required></p>
-        </div>
-        <div class="billing-form__card-nth">
-          <label class="billing-form__card-label" for="card-number">Card number</label>
-          <p class="billing-form__card-list">  
-            <input type="number" id="card-number" class="billing-form__item billing-form__item--number" required min="0000" max="9999">
-            <input type="number"  class="billing-form__item billing-form__item--number" required min="0000" max="9999">
-            <input type="number"  class="billing-form__item billing-form__item--number" required min="0000" max="9999">
-            <input type="number"  class="billing-form__item billing-form__item--number" required min="0000" max="9999">
+    </header>
+    <main class="page-body__index index">
+      <h1 class="visually-hidden">Керамика для интерьера</h1>
+      <section class="index__slider slider">
+        <h2 class="visually-hidden">Фотографии работ</h2>
+        <div class="slider__carousel carousel">
+          <p class="carousel__pagination carousel__pagination--total">
+            <span class="carousel__page">01</span><span class="carousel__slash">/</span><span class="carousel__total-pages">06</span>
           </p>
-        </div>
-        <div class="billing-form__card-last">
-          <label class="billing-form__card-label billing-form__card-label--date" for="card-date">Expire date</label>
-          <label class="billing-form__card-label" for="card-code">CVV code</label>
-          <button type="button" class="billing-form__note">?</button>
-          <p class="billing-form__card-cvv">
-            <input type="number" id="card-date" class="billing-form__item billing-form__item--date" required min="0000" max="9999">
-            <input type="number" id="card-code" class="billing-form__item billing-form__item--code" required min="000" max="999">
-          </p>
-        </div>
-      </fieldset>
-      <p class="billing-form__check">
-        <input type="checkbox" id="save-card" class="billing-form__save visually-hidden" checked>
-        <label class="billing-form__pay-label billing-form__pay-label--info billing-form__pay-label--grey" for="save-card">Save information of this credit card</label>
-      </p>
-      <p class="billing-form__check">
-        <input type="checkbox" id="accept-card" class="billing-form__accept visually-hidden">
-        <label class="billing-form__pay-label billing-form__pay-label--info" for="accept-card"><span>I accept the</span> terms and comditions <span>and the</span> Privacy Policies</label>
-      </p>
-      <a class="billing-form__button-back" href="#">Back</a>
-      <input type="submit" class="billing-form__button button button--check" value="Check Out">
-    </form>
-    <aside class="index__basket basket basket--closed">
-      <h2 class="visually-hidden">Purchase information</h2>
-      <section class="basket__list">
-        <h3 class="basket__title">My basket</h3>
-        <div class="basket__item item item--opened">
-          <form class="item__form" method="get" action="">
-            <img class="item__img" src="img/jacket.png" width="100" height="100" alt="White-yellow-blue jacket">
-            <p class="item__description">Amet minim mollit non<br>deserunt ullamco est sit</p>
-            <div class="item__quantity">
-              <input class="item__button item__button--minus" type="submit" value="&mdash;">
-              <input class="item__number" type="number" value="1">
-              <input class="item__button item__button--plus" type="submit" value="&plus;">
-            </div>
-            <span class="item__price">$ 525</span>
-          </form>
-          <button class="item__toggle" type="button"><span class="visually-hidden">Delete item</span></button>
-        </div>
-        <div class="basket__item item item--opened">
-          <form class="item__form" method="get" action="">
-            <img class="item__img" src="img/shoes.png" width="100" height="100" alt="White-yellow-blue jacket">
-            <p class="item__description">Amet minim mollit non</p>
-            <div class="item__quantity">
-              <input class="item__button" type="submit" value="&mdash;">
-              <input class="item__number" type="number" value="1">
-              <input class="item__button" type="submit" value="&plus;">
-            </div>
-            <span class="item__price">$ 525</span>
-          </form>
-          <button class="item__toggle" type="button"><span class="visually-hidden">Delete item</span></button>
-        </div>
-      </section>
-      <section class="basket__promo">
-        <h3 class="basket__title basket__title--promo">Promo code</h3>
-        <form class="basket__promo-form" method="get" action="http://localhost:3000/form.html">
-          <input class="basket__promo-code" type="text" placeholder="Placeholder Text">
-          <input type="submit" class="basket__promo-button button" value="Apply">
-        </form>
-      </section>
-      <section class="basket__total total">
-        <h3 class="basket__title visually-hidden">Total</h3>
-        <table class="total-table">
-          <tr>
-            <td>Subtotal</td>
-            <td>$1 050</td>
-          </tr>
-          <tr>
-            <td>Tax</td>
-            <td>$100</td>
-          </tr>
-          <tr>
-            <td>Shipping</td>
-            <td>$150</td>
-          </tr>
-          <tr>
-            <th>Total</th>
-            <th>$1 300</th>
-          </tr>
-        </table>
-      </section>
-    </aside>  
-  </main>
-  <script src="js/script.min.js"></script>
-</body>
-</html>
+          <ul class="carousel__list">
+            <li class="carousel__item">  
+              <div class="carousel__gallery">
+                <picture>
+                  <source type="image/webp" media="(min-width: 1200px)" srcset="img/bathroom_large.webp 1x, img/bathroom_large@2x.webp 2x">
+                    <source type="image/webp" media="(min-width: 768px)" srcset="img/bathroom_medium.webp 1x, img/bathroom_medium@2x.webp 2x">
+                      <source type="image/webp" srcset="img/bathroom.webp 1x, img/bathroom@2x.webp 2x">
+                        <source media="(min-width: 1200px)" srcset="img/bathroom_large.jpg 1x, img/bathroom_large@2x.jpg 2x">
+                          <source media="(min-width: 768px)" srcset="img/bathroom_medium.jpg 1x, img/bathroom_medium@2x.jpg 2x">
+                            <img class="carousel__img" src="img/bathroom.jpg" srcset="img/bathroom@2x.jpg 2x" alt="Фото ванной комнаты">
+                          </picture>
+                        </div>
+                        <div class="carousel__description">
+                          <h3>EQUIPE HABITAT</h3>
+                          <p>Изотоп урана ферментативно представляет полимерный ферментативно представляет полимерный </p>
+                        </div>
+                      </li>
+                    </ul>
+                    <div class="carousel__trail">
+                      <div class="carousel__box carousel__box--one carousel__box--active"></div>
+                      <div class="carousel__box carousel__box--two"></div>
+                      <div class="carousel__box carousel__box--three"></div>
+                      <div class="carousel__box carousel__box--four"></div>
+                      <div class="carousel__box carousel__box--five"></div>
+                      <div class="carousel__box carousel__box--six"></div>
+                    </div>
+                    <p class="carousel__pagination carousel__pagination--box">
+                      <span class="carousel__total-pages">02</span>
+                    </p>
+                    <div class="carousel__controls">
+                      <button class="carousel__control carousel__control--current" type="button" aria-label="Первый слайд"></button>
+                      <button class="carousel__control" type="button" aria-label="Второй слайд"></button>
+                      <button class="carousel__control" type="button" aria-label="Третий слайд"></button>
+                      <button class="carousel__control" type="button" aria-label="Четвёртый слайд"></button>
+                      <button class="carousel__control" type="button" aria-label="Пятый слайд"></button>
+                      <button class="carousel__control" type="button" aria-label="Шестой слайд"></button>
+                    </div>
+                    <button type="button" class="carousel__button">
+                      <span class="visually-hidden">Следующий слайд</span>
+                      <svg width="54" height="54" class="carousel__link-icon">
+                        <use xlink:href="img/sprite.svg#toggle"></use>
+                      </svg></button>
+                    </div>
+                    <div class="slider__description">
+                      <div class="slider__text">
+                        <h2 class="visually-hidden">Галлерея работ</h2>
+                        <p class="slider__subtitle">Задайте тон своему <b>интерьеру</b></p>
+                        <p class="slider__detail"><span>238 изотоп урана ферментативно</span> собой полимерный анод</p>
+                      </div>
+                      <div class="slider__shop-button">
+                        <a class="slider__link slider__link--gallery" href="#">design</a>
+                        <a class="slider__link slider__link--shop" href="#">shop</a>
+                      </div>
+                    </div>
+                  </section>
+                  <section class="index__gallery index__gallery--bathroom gallery gallery--left">
+                    <picture>
+                      <source type="image/webp" media="(min-width: 1200px)" srcset="img/bathroom_gallery_large.webp 1x, img/bathroom_gallery_large@2x.webp 2x">
+                        <source type="image/webp" media="(min-width: 768px)" srcset="img/bathroom_gallery_medium.webp 1x, img/bathroom_gallery_medium@2x.webp 2x">
+                          <source type="image/webp" srcset="img/bathroom_gallery.webp 1x, img/bathroom_gallery@2x.webp 2x">
+                            <source media="(min-width: 1200px)" srcset="img/bathroom_gallery_large.jpg 1x, img/bathroom_gallery_large@2x.jpg 2x">
+                              <source media="(min-width: 768px)" srcset="img/bathroom_gallery_medium.jpg 1x, img/bathroom_gallery_medium@2x.jpg 2x">
+                                <img class="gallery__img" src="img/bathroom_gallery.jpg" srcset="img/bathroom_gallery@2x.jpg 2x" alt="Фото ванной комнаты">
+                              </picture>
+                              <div class="gallery__description gallery__description--left">
+                                <div class="gallery__text">
+                                  <h2 class="gallery__title">Дизайн<br>ванных комнат</h2>
+                                  <p>238 изотоп урана ферментативно <span class="slider__hidden">представляет</span> собой полимерный анод</p>
+                                </div>
+                                <div class="gallery__show-button">
+                                  <button class="gallery__button-opened" type="button"><img src="img/icon-use/close_eye.svg" width="80" height="80" alt="Открыть галлерею работ"></button>
+                                  <div class="gallery__button-closed">
+                                    <a class="gallery__link gallery__link--button" href="#"><img src="img/icon-use/eye.svg" width="80" height="80" alt="Открыть галлерею работ"></a>
+                                    <a class="gallery__link gallery__link--text" href="#">Посмотреть<br>наши работы</a>
+                                  </div>
+                                </div>
+                              </div>
+                            </section>
+                            <section class="index__gallery index__gallery--room gallery gallery--right">
+                              <picture>
+                                <source type="image/webp" media="(min-width: 1200px)" srcset="img/room_gallery_large.webp 1x, img/room_gallery_large@2x.webp 2x">
+                                  <source type="image/webp" media="(min-width: 768px)" srcset="img/room_gallery_medium.webp 1x, img/room_gallery_medium@2x.webp 2x">
+                                    <source type="image/webp" srcset="img/room_gallery.webp 1x, img/room_gallery@2x.webp 2x">
+                                      <source media="(min-width: 1200px)" srcset="img/room_gallery_large.jpg 1x, img/room_gallery_large@2x.jpg 2x">
+                                        <source media="(min-width: 768px)" srcset="img/room_gallery_medium.jpg 1x, img/room_gallery_medium@2x.jpg 2x">
+                                          <img class="gallery__img gallery__img--right" src="img/room_gallery.jpg" srcset="img/room_gallery@2x.jpg 2x" alt="Фото гостиной">
+                                        </picture>
+                                        <div class="gallery__description">
+                                          <div class="gallery__text gallery__text--room">
+                                            <h2 class="gallery__title">Дизайн<br>гостиных комнат</h2>
+                                            <p>238 изотоп урана ферментативно <span class="slider__hidden">представляет</span> собой полимерный анод</p>
+                                          </div>
+                                          <div class="gallery__show-button gallery__show-button--right">
+                                            <button class="gallery__button-opened" type="button"><img src="img/icon-use/close_eye.svg" width="80" height="80" alt="Открыть галлерею работ"></button>
+                                            <div class="gallery__button-closed gallery__button-closed--right">
+                                              <a class="gallery__link gallery__link--button" href="#"><img src="img/icon-use/eye.svg" width="80" height="80" alt="Открыть галлерею работ"></a>
+                                              <a class="gallery__link gallery__link--text" href="#">Посмотреть<br>наши работы</a>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </section>
+                                      <div class="index__link">
+                                        <a class="index__link-gallery slider__link" href="#">Другие<br>работы</a>
+                                        <a class="index__link-shop slider__link" href="#">Перейти<br>в интернет<br>магазин</a>
+                                      </div>
+                                    </main>
+                                    <footer class="page-body__main-footer main-footer">
+                                      <section class="main-footer__contacts contacts">
+                                        <div class="contacts__phone">
+                                          <h3 class="contacts__title">Контакты</h3>
+                                          <a class="contacts__link" href="tel:88314205010">Единый телефон: 8 (831) 420 - 50 - 10</a>
+                                          <a class="contacts__link" href="mailto:miokeramika@mail.ru">E-mail: miokeramika@mail.ru</a>
+                                        </div>
+                                        <div class="contacts__address address">
+                                          <h3 class="contacts__title">Адреса магазинов</h3>
+                                          <ul class="address__list">
+                                            <li class="address__item">ул. Пискунова, 21/2</li>
+                                            <li class="address__item">ул. Ижорская, 18</li>
+                                            <li class="address__item">ул. Белинского, 11/66</li>
+                                            <li class="address__item address__item--desktop">ул. Чачиной, 36 (склад)</li>
+                                          </ul>
+                                        </div>
+                                        <div class="contacts__time">
+                                          <h3 class="contacts__title">Время работы</h3>
+                                          <p>Пн - Пт:  10:00 - 19:00</p>
+                                          <p>Сб:  10:00 - 18:00</p>
+                                          <p>Вс:  выходной</p>
+                                        </div>
+                                        <div class="contacts__social social">
+                                          <div class="social__box">
+                                            <h3 class="contacts__title contacts__title--social">Мы в Instagram</h3>
+                                            <a class="social__link" href="https://www.instagram.com/htmlacademy">
+                                              <span class="visually-hidden">Инстаграм</span>
+                                              <svg width="20" height="20" class="social__link-icon">
+                                                <use xlink:href="img/sprite.svg#instagram"></use>
+                                              </svg>
+                                            </a>
+                                          </div>
+                                          <div class="social__gallery">
+                                            <div class="social__img">
+                                              <img src="img/image_3.jpg" width="170" height="230" alt="Фото ванной комнаты">
+                                            </div>
+                                            <div class="social__img">
+                                              <img src="img/image_2.jpg" width="170" height="105" alt="Фото ванной комнаты">
+                                            </div>
+                                            <div class="social__img">
+                                              <img src="img/image_1.jpg" width="170" height="230" alt="Фото ванной комнаты">
+                                            </div>
+                                            <div class="social__img">
+                                              <img src="img/image_2.jpg" width="170" height="105" alt="Фото ванной комнаты">
+                                            </div>
+                                            <div class="social__img">
+                                              <img src="img/image_6.jpg" width="170" height="230" alt="Фото ванной комнаты">
+                                            </div>
+                                            <div class="social__img">
+                                              <img src="img/image_5.jpg" width="170" height="230" alt="Фото ванной комнаты">
+                                            </div>
+                                            <div class="social__img">
+                                              <img src="img/image_4.jpg" width="170" height="230" alt="Фото ванной комнаты">
+                                            </div>
+                                            <div class="social__img">
+                                              <img src="img/image_5.jpg" width="170" height="230" alt="Фото ванной комнаты">
+                                            </div>
+                                            <div class="social__img">
+                                              <img src="img/image_2.jpg" width="170" height="105" alt="Фото ванной комнаты">
+                                            </div>
+                                            <div class="social__img">
+                                              <img src="img/image_2.jpg" width="170" height="105" alt="Фото ванной комнаты">
+                                            </div>
+                                          </div>
+                                        </div>
+                                        <p class="contacts__conf"><a href="#">Политика коденфициальности</a></p>
+                                        <p class="contacts__author">© 2009 - 2021 Миокерамика</p>
+                                      </section>
+                                      <section class="main-footer__navigation-footer navigation-footer">
+                                        <nav class="navigation-footer">
+                                          <ul class="navigation-footer__list">
+                                            <li class="navigation-footer__item">
+                                              <a class="navigation-footer__link" href="#">Главная</a>
+                                            </li>
+                                            <li class="navigation-footer__item">
+                                              <a class="navigation-footer__link" href="#">Каталог</a>
+                                            </li>
+                                            <li class="navigation-footer__item">
+                                              <a class="navigation-footer__link" href="#">Дизайн</a>
+                                            </li>
+                                            <li class="navigation-footer__item">
+                                              <a class="navigation-footer__link" href="#">Доставка</a>
+                                            </li>
+                                            <li class="navigation-footer__item">
+                                              <a class="navigation-footer__link" href="#">Гарантии</a>
+                                            </li>
+                                            <li class="navigation-footer__item">
+                                              <a class="navigation-footer__link" href="#">О нас</a>
+                                            </li>
+                                            <li class="navigation-footer__item">
+                                              <a class="navigation-footer__link" href="#">Контакты</a>
+                                            </li>
+                                          </ul>   
+                                        </nav>
+                                        <div class="main-footer__logo">
+                                          <img class="main-footer__logo-img" src="img/icon-use/logo_white.svg" alt="Логотип МиоКерамика">
+                                        </div>
+                                      </section>
+                                    </footer>
+                                  </div>
+                                  <script src="js/script.min.js"></script>
+                                </body>
+                                </html>
